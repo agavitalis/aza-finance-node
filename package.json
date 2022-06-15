@@ -2,10 +2,15 @@
   "name": "transactions-tracker-openapi",
   "version": "1.0.0",
   "description": "A simple Nodejs application illustrating the use of Open API",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon --config nodemon.json src/index.ts",
-    "eslint:fix": "eslint --fix"
+    "build": "rimraf dist && tsc && npm run copy-files",
+    "copy-files": "copyfiles -u 1 src/**/*.hbs dist",
+    "preserve": "npm run build",
+    "serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/index.js\"",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "dev": "nodemon --config nodemon.json src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
