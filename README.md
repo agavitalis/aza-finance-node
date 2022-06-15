@@ -1,6 +1,6 @@
-# Azafinance API with Open API Specifications
+# Azafinance API API Ms with Ts
 
-This project is a REST API with all the endpoints documented built with Node.js and Express.
+This project is a simple transaction microservice using RabbitMQ is it's event listner.
 
 ## Prerequisites
 - Node.js 10+
@@ -13,6 +13,9 @@ This project is a REST API with all the endpoints documented built with Node.js 
 ```bash
 npm install
 ```
+
+## Running the app
+
 - Create local environment file
 ```shell
 cp .env.example .env
@@ -38,3 +41,13 @@ The application will be live on http://localhost:5000 and you can view the docs 
 
 - Live application
 The application is currently live on https://aza-finance-api-node.herokuapp.com and you can view the docs on https://aza-finance-api-node.herokuapp.com/docs/
+
+
+## Stay in touch
+
+- Author - [Ogbonna Vitalis](agavitalisogbonna@gmail.com)
+
+
+## License
+
+Nest is [MIT licensed](LICENSE).
